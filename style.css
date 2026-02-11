@@ -1,0 +1,77 @@
+/* RESET & BASIC */
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+body{font-family:'Poppins', sans-serif;color:#222;line-height:1.6;}
+
+/* NAVBAR */
+header{
+    position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;
+    padding:20px 80px;background:white;box-shadow:0 5px 20px rgba(0,0,0,.05);z-index:1000;
+}
+header .logo-section{display:flex;align-items:center;}
+header .logo{color:#00aaff;font-weight:700;font-size:24px;}
+header .header-logo{width:50px;height:auto;margin-right:10px;}
+header nav a{margin-left:30px;text-decoration:none;color:#333;font-weight:600;transition:.3s;}
+header nav a:hover, header nav a.active{color:#00c3ff;border-bottom:2px solid #00c3ff;padding:2px;}
+
+/* HERO */
+.hero{height:100vh;background:url('images/background.webp') center/cover no-repeat;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hero .overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,.65);}
+.hero-content{position:relative;display:flex;align-items:center;gap:80px;color:white;max-width:1200px;margin:auto;}
+.hero-text h3{font-weight:300;font-size:22px;margin-bottom:5px;}
+.hero-text h1{font-size:60px;margin-bottom:10px;min-height:70px;}
+.hero-text h2{color:#00c3ff;margin-bottom:20px;}
+.hero-text p{max-width:500px;margin-bottom:25px;font-size:18px;}
+.btn{padding:12px 28px;background:#00c3ff;color:white;border-radius:8px;text-decoration:none;font-weight:600;transition:.3s;}
+.btn:hover{background:#0099cc;transform:translateY(-3px);}
+.hero-img img{width:350px;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,.5);transition: transform .4s ease;}
+.hero-img img:hover{transform:scale(1.05);}
+.social-icons{margin-top:25px;}
+.social-icons a{display:inline-flex;justify-content:center;align-items:center;width:45px;height:45px;border-radius:50%;background:white;color:#00aaff;margin-right:12px;font-size:18px;transition:.3s;}
+.social-icons a:hover{background:#00aaff;color:white;transform:translateY(-5px);}
+
+/* SECTIONS */
+section{padding:120px 80px;text-align:center;opacity:0;transform:translateY(30px);transition:all 1s ease-out;}
+.fade-in-active{opacity:1;transform:translateY(0);}
+.section-container{max-width:1000px;margin:auto;padding:40px;background:white;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.05);}
+
+/* ABOUT */
+.about{background:#f0f4f8;color:#333;}
+
+/* SKILLS */
+.skills{background:#fff;}
+.skills .skill{max-width:600px;margin:20px auto;text-align:left;}
+.skills .skill p{margin-bottom:8px;font-weight:600;}
+.skills .bar{background:#ddd;height:14px;border-radius:20px;overflow:hidden;}
+.skill-bar{width:0;height:100%;display:inline-block;background:#00c3ff;border-radius:20px;transition: width 1.5s ease-in-out;}
+
+/* PROJECTS */
+.projects{background:#f7f9fc;}
+.projects .project-grid{display:flex;gap:30px;flex-wrap:wrap;justify-content:center;margin-top:40px;}
+.projects .card{width:300px;border-radius:15px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.1);transition:.3s;background:white;position:relative;padding-bottom:20px;}
+.projects .card img{width:100%;height:200px;object-fit:cover;transition: transform .4s ease;}
+.projects .card:hover img{transform:scale(1.05);}
+.projects .card h3{margin:10px 0;}
+.projects .card p{padding:0 15px 10px 15px;font-size:15px;color:#555;}
+.project-btn{display:inline-block;margin:0 0 10px 0;padding:8px 18px;background:#00c3ff;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;opacity:0;transform:translateY(10px);transition: all 0.3s ease;}
+.card:hover .project-btn{opacity:1;transform:translateY(0);}
+
+/* CONTACT */
+.contact{background:#00aaff;color:white;}
+.contact .section-container{background:#00aaff;box-shadow:none;color:white;}
+
+/* FOOTER */
+footer{background:#111;color:white;text-align:center;padding:40px 20px;}
+.footer-icons{margin-bottom:15px;}
+.footer-icons a{color:white;font-size:20px;margin:0 10px;transition:.3s;}
+.footer-icons a:hover{color:#00c3ff;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.hero-content{flex-direction:column;gap:40px;text-align:center;}
+.hero-text h1{font-size:45px;}
+header{padding:20px;}
+header nav{display:none;}
+.hero-img img{width:260px;}
+section{padding:80px 30px;}
+.section-container{padding:30px;}
+}
